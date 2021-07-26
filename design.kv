@@ -1,0 +1,187 @@
+#:import Factory kivy.factory.Factory
+
+BoxLayout:
+    orientation:"horizontal"
+    size:root.width,root.height
+
+    AnchorLayout:
+        anchor_x:'center'
+        anchor_y:'center'
+        size_hint:(None, None)
+        size:(900,800)
+
+        Image:
+            id:green_base
+            source:"states_green.png"
+
+        Image:
+            id:andhra
+            source:"states/andhra.png"
+            color:(1,1,1,0)
+
+        Image:
+            id:arunachal
+            source:"states/arunachal.png"
+            color:(1,1,1,0)
+
+        Image:
+            id:assam
+            source:"states/assam.png"
+            color:(1,1,1,0)
+
+        Image:
+            id:bengal
+            source:"states/bengal.png"
+            color:(1,1,1,0)
+
+        Image:
+            id:bihar
+            source:"states/bihar.png"
+            color:(1,1,1,0)
+
+        Image:
+            id:chattis
+            source:"states/chattis.png"
+            color:(1,1,1,0)
+
+        Image:
+            id:delhi
+            source:"states/delhi.png"
+            color:(1,1,1,0)
+
+        Image:
+            id:goa
+            source:"states/goa.png"
+            color:(1,1,1,0)
+
+        Image:
+            id:gujrat
+            source:"states/gujrat.png"
+            color:(1,1,1,0)
+
+        Image:
+            id:haryana
+            source:"states/haryana.png"
+            color:(1,1,1,0)
+
+        Image:
+            id:himachal
+            source:"states/himachal.png"
+            color:(1,1,1,0)
+
+        Image:
+            id:jammu
+            source:"states/jammu.png"
+            color:(1,1,1,0)
+
+        Image:
+            id:jharkhand
+            source:"states/jharkhand.png"
+            color:(1,1,1,0)
+
+        Image:
+            id:karnataka
+            source:"states/karnataka.png"
+            color:(1,1,1,0)
+
+        Image:
+            id:kerela
+            source:"states/kerela.png"
+            color:(1,1,1,0)
+
+        Image:
+            id:ladakh
+            source:"states/ladakh.png"
+            color:(1,1,1,0)
+
+        Image:
+            id:maha
+            source:"states/maha.png"
+            color:(1,1,1,0)
+
+        Image:
+            id:manipur
+            source:"states/manipur.png"
+            color:(1,1,1,0)
+
+        Image:
+            id:meghalaya
+            source:"states/meghalaya.png"
+            color:(1,1,1,0)
+
+        Image:
+            id:mizoram
+            source:"states/mizoram.png"
+            color:(1,1,1,0)
+
+        Image:
+            id:mp
+            source:"states/mp.png"
+            color:(1,1,1,0)
+
+        Image:
+            id:nagaland
+            source:"states/nagaland.png"
+            color:(1,1,1,0)
+
+        Image:
+            id:odisha
+            source:"states/odisha.png"
+            color:(1,1,1,0)
+
+        Image:
+            id:punjab
+            source:"states/punjab.png"
+            color:(1,1,1,0)
+
+        Image:
+            id:rajasthan
+            source:"states/rajasthan.png"
+            color:(1,1,1,0)
+
+        Image:
+            id:sikkim
+            source:"states/sikkim.png"
+            color:(1,1,1,0)
+
+        Image:
+            id:tamil
+            source:"states/tamil.png"
+            color:(1,1,1,0)
+
+        Image:
+            id:telangana
+            source:"states/telangana.png"
+            color:(1,1,1,0)
+
+        Image:
+            id:tripura
+            source:"states/tripura.png"
+            color:(1,1,1,0)
+
+        Image:
+            id:uk
+            source:"states/uk.png"
+            color:(1,1,1,0)
+
+        Image:
+            id:up
+            source:"states/up.png"
+            color:(1,1,1,0)
+
+    BoxLayout:
+        orientation:"vertical"
+        size_hint:(None, None)
+        size:(250, 800)
+
+        Label:
+            text:"Days since 14th May 2020:" + str(int(speed.value))
+        Slider:
+            id:speed
+            min:0
+            max:497
+            step:1
+            value:0
+            on_value:
+                states = [andhra, arunachal, assam, bihar, chattis, delhi, goa, gujrat, haryana, himachal, jammu, jharkhand, karnataka, kerela, ladakh, mp, maha, manipur, meghalaya, mizoram, nagaland, odisha, punjab, rajasthan, sikkim, tamil, telangana, tripura, up, uk, bengal]
+                app.slid(speed,states)
