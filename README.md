@@ -3,5 +3,7 @@
 - Data till 24th July, 2021.
 - Program requires Kivy to run.
 
+Data Link - https://api.covid19india.org/
+
 ![image](https://user-images.githubusercontent.com/65825273/127043362-bd9ad48f-ebbc-475c-8720-77ade363f39a.png)
 
